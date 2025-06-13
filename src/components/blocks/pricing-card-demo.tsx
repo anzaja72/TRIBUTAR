@@ -4,6 +4,7 @@ import { PricingCard } from "@/components/ui/pricing-card";
 export function PricingCardBasic() {
   // Simulating user count - you can replace this with actual state management
   const [userCount] = useState(50); // Change this to test discount logic
+  const [enterpriseSubscribers] = useState(3); // Track enterprise subscribers
 
   const freemiumFeatures = [
     { text: "Consultas tributarias básicas", included: true },
@@ -79,14 +80,15 @@ export function PricingCardBasic() {
           <PricingCard
             title="Empresarial"
             description="Plan personalizado para equipos de gran escala con automatización"
-            price={0}
+            price={699}
+            originalPrice={1000}
             userCount={userCount}
             features={enterpriseFeatures}
             buttonText="Contactar Ventas"
             buttonVariant="secondary"
             onButtonClick={() => console.log('Enterprise plan selected')}
-            isCustomPricing={true}
-            customDescription="Diseñado para empresas que necesitan automatización de datos y cumplimiento legal"
+            offer={`¡Solo para los primeros 10 suscriptores empresariales! (${enterpriseSubscribers}/10)`}
+            enterpriseSubscribers={enterpriseSubscribers}
           />
         </div>
 
