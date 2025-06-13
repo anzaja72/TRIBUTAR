@@ -171,16 +171,7 @@ export function PricingCard({
         
         <CardFooter className="pt-6">
           <Button 
-            className={`w-full transition-all duration-200 ${
-              popular 
-                ? 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg text-white' 
-                : buttonVariant === 'outline' 
-                  ? 'border-white/20 text-white hover:bg-white/10' 
-                  : buttonVariant === 'secondary'
-                    ? 'bg-white/10 text-white hover:bg-white/20'
-                    : 'bg-white text-black hover:bg-white/90'
-            }`}
-            variant={popular ? 'default' : buttonVariant}
+            className="w-full bg-white text-black hover:bg-white/90 transition-all duration-200 font-medium"
             size="lg"
             onClick={onButtonClick}
           >
