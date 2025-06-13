@@ -47,7 +47,7 @@ const DemoOne = () => {
               TRIBUTAR-IA
             </h1>
             <p className="text-lg text-neutral-300 max-w-2xl">
-              Diseñado pensando en estética y rendimiento. Experimenta procesamiento ultra-rápido, seguridad avanzada y diseño intuitivo.
+              Resuelve cualquier duda tributaria, redacta respuestas personalizadas y analiza requerimientos en segundo.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 items-center">
               <Button 
