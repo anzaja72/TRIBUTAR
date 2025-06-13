@@ -44,7 +44,7 @@ const DemoOne = () => {
           
           <div className="space-y-6 flex items-center justify-center flex-col ">
             <h1 className=" text-3xl md:text-6xl font-semibold tracking-tight max-w-3xl">
-              Descubre minimalismo y poder en un solo lugar
+              TRIBUTAR-IA
             </h1>
             <p className="text-lg text-neutral-300 max-w-2xl">
               Diseñado pensando en estética y rendimiento. Experimenta procesamiento ultra-rápido, seguridad avanzada y diseño intuitivo.
