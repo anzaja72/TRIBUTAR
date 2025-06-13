@@ -1,7 +1,7 @@
 import { Scene } from "@/components/ui/hero-section";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { DivideIcon as LucideIcon, Cpu, ShieldCheck, Layers, Zap, Eye, BookOpenCheck } from "lucide-react";
+import { Cpu, ShieldCheck, Layers, Zap } from "lucide-react";
 
 const features = [
   {
@@ -30,19 +30,25 @@ const DemoOne = () => {
   const dianiaUrl = 'https://chat.tributar-ia.co';
 
   return (
-    <div className="min-h-screen w-screen bg-gradient-to-br from-[#000] to-[#1A2428] text-white flex flex-col items-center justify-center p-8">
+    <section className="relative min-h-screen w-full bg-gradient-to-br from-[#000] to-[#1A2428] text-white flex flex-col items-center justify-center p-8 overflow-hidden">
+      {/* 3D Background Scene - positioned absolutely and contained within this section */}
+      <div className="absolute inset-0 z-0">
+        <Scene />
+      </div>
+      
+      {/* Content Layer */}
       <div className="w-full max-w-6xl space-y-12 relative z-10">
         <div className="flex flex-col items-center text-center space-y-8">
           <Badge variant="secondary" className="backdrop-blur-sm bg-white/10 border border-white/20 text-white hover:bg-white/20 px-4 py-2 rounded-full">
             ✨ Herramientas de Nueva Generación
           </Badge>
           
-          <div className="space-y-6 flex items-center justify-center flex-col ">
-            <h1 className=" text-3xl md:text-6xl font-semibold tracking-tight max-w-3xl">
+          <div className="space-y-6 flex items-center justify-center flex-col">
+            <h1 className="text-3xl md:text-6xl font-semibold tracking-tight max-w-3xl">
               TRIBUTAR-IA
             </h1>
             <p className="text-lg text-neutral-300 max-w-2xl">
-              Resuelve cualquier duda tributaria, redacta respuestas personalizadas y analiza requerimientos en segundo.
+              Resuelve cualquier duda tributaria, redacta respuestas personalizadas y analiza requerimientos en segundos.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 items-center">
               <Button 
@@ -74,10 +80,7 @@ const DemoOne = () => {
           ))}
         </div>
       </div>
-      <div className='absolute inset-0'>
-        <Scene />
-      </div>
-    </div>
+    </section>
   );
 };
 

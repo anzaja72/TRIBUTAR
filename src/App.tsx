@@ -1,5 +1,4 @@
 import React from 'react';
-import { Hero } from './components/Hero';
 import { Features } from './components/Features';
 import { Benefits } from './components/Benefits';
 import { Services } from './components/Services';
@@ -11,7 +10,7 @@ import { DemoOne } from './components/ui/hero-demo';
 function App() {
   return (
     <div className="min-h-screen bg-white">
-      <Hero />
+      {/* New 3D Hero Section - replaces old Hero */}
       <DemoOne />
       <Features />
       <Benefits />
