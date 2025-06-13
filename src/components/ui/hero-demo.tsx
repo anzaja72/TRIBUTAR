@@ -26,7 +26,7 @@ const features = [
   },
 ];
 
-const DemoOne = () => {
+export const DemoOne = () => {
   const dianiaUrl = 'https://chat.tributar-ia.co';
 
   return (
@@ -83,5 +83,3 @@ const DemoOne = () => {
     </section>
   );
 };
-
-export { DemoOne };
