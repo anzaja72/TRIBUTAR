@@ -5,11 +5,6 @@ import { DivideIcon as LucideIcon, Cpu, ShieldCheck, Layers, Zap, Eye, BookOpenC
 
 const features = [
   {
-    icon: BookOpenCheck,
-    title: "Tributar-IA",
-    description: "Asistente tributario con IA entrenada para Colombia. Automatiza análisis DIAN, redacción legal y normatividad actualizada.",
-  },
-  {
     icon: Cpu,
     title: "Rendimiento",
     description: "Procesamiento de datos ultra-rápido en cualquier situación.",
