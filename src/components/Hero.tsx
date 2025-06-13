@@ -34,7 +34,7 @@ export function Hero() {
           <p className="text-sm font-semibold tracking-wider uppercase mb-6">
             ASISTENTE TRIBUTARIO INTELIGENTE
           </p>
-          <h1 className="text-8xl font-serif mb-8">
+          <h1 className="text-10xl font-serif mb-8">
             Tributar-IA
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
