@@ -173,8 +173,3 @@ export function PricingCard({
     </motion.div>
   );
 }
-</CardFooter>
-      </Card>
-    </motion.div>
-  );
-}
