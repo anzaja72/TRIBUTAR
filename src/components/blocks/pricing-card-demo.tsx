@@ -6,31 +6,31 @@ export function PricingCardBasic() {
   const [userCount] = useState(50); // Change this to test discount logic
 
   const freemiumFeatures = [
-    { text: "Basic tax consultations", included: true },
-    { text: "Basic AI responses", included: true },
-    { text: "Email support", included: true },
-    { text: "Access to legal database", included: false },
-    { text: "Advanced document analysis", included: false }
+    { text: "Consultas tributarias básicas", included: true },
+    { text: "Respuestas básicas de IA", included: true },
+    { text: "Soporte por email", included: true },
+    { text: "Acceso a base de datos legal", included: false },
+    { text: "Análisis avanzado de documentos", included: false }
   ];
 
   const professionalFeatures = [
-    { text: "Unlimited usage", included: true },
-    { text: "Advanced AI responses", included: true },
-    { text: "Full access to legal database", included: true },
-    { text: "Visual document analysis", included: true },
-    { text: "Priority support", included: true }
+    { text: "Uso ilimitado", included: true },
+    { text: "Respuestas avanzadas de IA", included: true },
+    { text: "Acceso completo a base de datos legal", included: true },
+    { text: "Análisis visual de documentos", included: true },
+    { text: "Soporte prioritario", included: true }
   ];
 
   const enterpriseFeatures = [
-    { text: "10 unlimited user accounts", included: true },
-    { text: "Custom AI model trained on company data", included: true },
-    { text: "Data stored on Tributar-IA servers", included: true },
-    { text: "Direct integration with Legal-IA", included: true },
-    { text: "HIPAA, GDPR, LGPD compliance", included: true },
-    { text: "Personal data protection standards", included: true },
-    { text: "24/7 priority support", included: true },
-    { text: "Custom integration", included: true },
-    { text: "SLA agreement", included: true }
+    { text: "10 cuentas de usuario ilimitadas", included: true },
+    { text: "Modelo de IA personalizado entrenado con datos de la empresa", included: true },
+    { text: "Datos almacenados en servidores de Tributar-IA", included: true },
+    { text: "Integración directa con Legal-IA", included: true },
+    { text: "Cumplimiento HIPAA, GDPR, LGPD", included: true },
+    { text: "Estándares de protección de datos personales", included: true },
+    { text: "Soporte prioritario 24/7", included: true },
+    { text: "Integración personalizada", included: true },
+    { text: "Acuerdo de nivel de servicio (SLA)", included: true }
   ];
 
   return (
@@ -53,40 +53,40 @@ export function PricingCardBasic() {
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <PricingCard
             title="Freemium"
-            description="Try the platform with no risk"
+            description="Prueba la plataforma sin riesgo"
             price={0}
             userCount={userCount}
             features={freemiumFeatures}
-            buttonText="Start for Free"
+            buttonText="Comenzar Gratis"
             buttonVariant="outline"
             onButtonClick={() => console.log('Freemium plan selected')}
-            offer="10 free uses included"
+            offer="10 usos gratuitos incluidos"
           />
 
           <PricingCard
-            title="Professional"
-            description="Unlimited use for growing professionals"
+            title="Profesional"
+            description="Uso ilimitado para profesionales en crecimiento"
             price={15}
             originalPrice={30}
             userCount={userCount}
             features={professionalFeatures}
-            buttonText="Upgrade Now"
+            buttonText="Actualizar Ahora"
             popular={true}
             onButtonClick={() => console.log('Professional plan selected')}
-            offer="Special launch offer for first 100 users"
+            offer="Oferta especial de lanzamiento para los primeros 100 usuarios"
           />
 
           <PricingCard
-            title="Enterprise"
-            description="Custom plan for high-scale teams with automation"
+            title="Empresarial"
+            description="Plan personalizado para equipos de gran escala con automatización"
             price={0}
             userCount={userCount}
             features={enterpriseFeatures}
-            buttonText="Contact Sales"
+            buttonText="Contactar Ventas"
             buttonVariant="secondary"
             onButtonClick={() => console.log('Enterprise plan selected')}
             isCustomPricing={true}
-            customDescription="Tailored for companies needing data automation and legal compliance"
+            customDescription="Diseñado para empresas que necesitan automatización de datos y cumplimiento legal"
           />
         </div>
 

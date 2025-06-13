@@ -47,7 +47,7 @@ export function PricingCard({
   customDescription
 }: PricingCardProps) {
   // Discount logic for first 100 users (only for Professional plan)
-  const shouldShowDiscount = userCount <= 100 && title === 'Professional';
+  const shouldShowDiscount = userCount <= 100 && title === 'Profesional';
   const displayOriginal = shouldShowDiscount ? (originalPrice || basePriceInput * 2) : originalPrice;
   const displayPrice = shouldShowDiscount ? basePriceInput : basePriceInput;
 
@@ -73,7 +73,7 @@ export function PricingCard({
         {shouldShowDiscount && (
           <div className="absolute -top-2 -right-2 z-10">
             <Badge variant="destructive" className="bg-red-500 text-white px-3 py-1 shadow-lg animate-pulse">
-              50% OFF
+              50% DESC
             </Badge>
           </div>
         )}
@@ -86,8 +86,8 @@ export function PricingCard({
           <div className="mt-6">
             {isCustomPricing ? (
               <div className="text-center">
-                <span className="text-2xl font-bold text-gray-900">Custom pricing</span>
-                <p className="text-sm text-gray-600 mt-2">Contact Sales</p>
+                <span className="text-2xl font-bold text-gray-900">Precio personalizado</span>
+                <p className="text-sm text-gray-600 mt-2">Contactar Ventas</p>
               </div>
             ) : (
               <div className="flex items-center justify-center space-x-2">
