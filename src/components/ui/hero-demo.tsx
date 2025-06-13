@@ -44,7 +44,7 @@ const DemoOne = () => {
           </Badge>
           
           <div className="space-y-6 flex items-center justify-center flex-col">
-            <h1 className="text-3xl md:text-6xl font-semibold tracking-tight max-w-3xl">
+            <h1 className="text-6xl md:text-9xl lg:text-[12rem] font-semibold tracking-tight max-w-5xl leading-none">
               TRIBUTAR-IA
             </h1>
             <p className="text-lg text-neutral-300 max-w-2xl">
