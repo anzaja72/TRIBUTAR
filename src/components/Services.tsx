@@ -164,9 +164,9 @@ export function Services() {
   const dianiaUrl = 'https://chat.tributar-ia.co';
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 py-24">
+    <div className="min-h-screen bg-gradient-to-br from-[#1A2428] to-[#0F1419] py-24">
       <div className="max-w-7xl mx-auto px-4">
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-16">
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white">
           ¿Cómo puedo ayudarte con tu gestión tributaria?
         </h1>
         
@@ -174,20 +174,20 @@ export function Services() {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300"
+              className="bg-white/5 border border-white/10 rounded-lg shadow-lg overflow-hidden transition-all duration-300 backdrop-blur-sm"
             >
               <button
                 onClick={() => toggleSection(index)}
-                className="w-full p-6 flex items-center justify-between bg-white hover:bg-gray-50 transition-colors"
+                className="w-full p-6 flex items-center justify-between bg-transparent hover:bg-white/5 transition-colors"
               >
                 <div className="flex items-center space-x-4">
-                  <service.icon className="h-6 w-6 text-blue-600" />
-                  <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
+                  <service.icon className="h-6 w-6 text-blue-400" />
+                  <h3 className="text-xl font-semibold text-white">{service.title}</h3>
                 </div>
                 {openSections.includes(index) ? (
-                  <ChevronUp className="h-5 w-5 text-gray-500" />
+                  <ChevronUp className="h-5 w-5 text-neutral-400" />
                 ) : (
-                  <ChevronDown className="h-5 w-5 text-gray-500" />
+                  <ChevronDown className="h-5 w-5 text-neutral-400" />
                 )}
               </button>
               
@@ -196,8 +196,8 @@ export function Services() {
                   <ul className="space-y-3">
                     {service.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-start">
-                        <span className="h-2 w-2 mt-2 rounded-full bg-blue-600 mr-3" />
-                        <span className="text-gray-600">{item}</span>
+                        <span className="h-2 w-2 mt-2 rounded-full bg-blue-400 mr-3" />
+                        <span className="text-neutral-300">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -210,7 +210,7 @@ export function Services() {
         <div className="mt-16 text-center">
           <a
             href={dianiaUrl}
-            className="inline-block px-8 py-4 text-lg rounded-full bg-black text-white hover:bg-gray-800 transition-colors"
+            className="inline-block px-8 py-4 text-lg rounded-full bg-white text-black hover:bg-white/90 transition-colors"
           >
             Hacer prueba gratuita
           </a>

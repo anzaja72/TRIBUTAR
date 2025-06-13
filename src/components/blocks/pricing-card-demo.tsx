@@ -34,17 +34,17 @@ export function PricingCardBasic() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 py-16">
+    <div className="min-h-screen bg-gradient-to-br from-[#0F1419] to-[#1A2428] py-16">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl font-bold text-white mb-4">
             Planes que se adaptan a tu negocio
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-neutral-300 max-w-3xl mx-auto">
             Elige el plan perfecto para optimizar tu gestión tributaria con Tributar-IA
           </p>
           {userCount <= 100 && (
-            <div className="mt-6 inline-block bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">
+            <div className="mt-6 inline-block bg-green-500/20 border border-green-400/30 text-green-300 px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
               🎉 ¡Oferta de lanzamiento especial para los primeros 100 usuarios!
             </div>
           )}
@@ -91,10 +91,10 @@ export function PricingCardBasic() {
         </div>
 
         <div className="mt-16 text-center">
-          <p className="text-gray-600 mb-4">
+          <p className="text-neutral-300 mb-4">
             ¿Necesitas un plan personalizado?
           </p>
-          <button className="text-blue-600 hover:text-blue-700 font-medium underline">
+          <button className="text-blue-400 hover:text-blue-300 font-medium underline">
             Contáctanos para una solución a medida
           </button>
         </div>

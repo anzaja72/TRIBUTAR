@@ -9,8 +9,8 @@ import { DemoOne } from './components/ui/hero-demo';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* New 3D Hero Section - replaces old Hero */}
+    <div className="min-h-screen bg-gradient-to-br from-[#000] to-[#1A2428] text-white">
+      {/* New 3D Hero Section */}
       <DemoOne />
       <Features />
       <Benefits />

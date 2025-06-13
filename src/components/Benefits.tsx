@@ -21,19 +21,19 @@ const benefits = [
 
 export function Benefits() {
   return (
-    <div className="py-24 bg-white">
+    <div className="py-24 bg-gradient-to-br from-[#0F1419] to-[#1A2428]">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-16">
-          Beneficios de usar Dian-IA
+        <h2 className="text-3xl font-bold text-center text-white mb-16">
+          Beneficios de usar Tributar-IA
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => (
-            <div key={index} className="text-center p-6 rounded-lg bg-gray-50 shadow-lg">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 mb-6">
-                <benefit.icon className="h-8 w-8 text-blue-600" />
+            <div key={index} className="text-center p-6 rounded-lg bg-white/5 border border-white/10 backdrop-blur-sm shadow-lg">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-500/20 border border-blue-400/30 mb-6">
+                <benefit.icon className="h-8 w-8 text-blue-400" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">{benefit.title}</h3>
-              <p className="text-gray-600">{benefit.description}</p>
+              <h3 className="text-xl font-semibold text-white mb-4">{benefit.title}</h3>
+              <p className="text-neutral-300">{benefit.description}</p>
             </div>
           ))}
         </div>
