@@ -43,11 +43,14 @@ export function Features() {
             </div>
           </div>
           <div className="relative">
-            <img
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80"
-              alt="Dashboard Features"
-              className="rounded-lg shadow-xl border border-white/10"
-            />
+            <div className="rounded-lg shadow-xl border border-white/10 overflow-hidden">
+              <iframe
+                src="https://www.canva.com/design/DAGqOYi3M9Y/bAc7tKQsZmpIfX4SOjTNjA/watch?embed"
+                allowFullScreen
+                className="w-full h-64 md:h-80 lg:h-96"
+                title="Tributar-IA Demo Video"
+              />
+            </div>
           </div>
         </div>
       </div>
