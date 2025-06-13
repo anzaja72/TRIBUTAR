@@ -27,6 +27,7 @@ interface PricingCardProps {
   offer?: string;
   isCustomPricing?: boolean;
   customDescription?: string;
+  enterpriseSubscribers?: number;
 }
 
 export function PricingCard({
@@ -44,10 +45,15 @@ export function PricingCard({
   userCount = 0,
   offer,
   isCustomPricing = false,
-  customDescription
+  customDescription,
+  enterpriseSubscribers = 0
 }: PricingCardProps) {
   // Discount logic for first 100 users (only for Professional plan)
   const shouldShowDiscount = userCount <= 100 && title === 'Profesional';
+  
+  // Enterprise special pricing logic
+  const isEnterpriseSpecial = title === 'Empresarial' && enterpriseSubscribers < 10;
+  
   const displayOriginal = shouldShowDiscount ? (originalPrice || basePriceInput * 2) : originalPrice;
   const displayPrice = shouldShowDiscount ? basePriceInput : basePriceInput;
 
@@ -74,6 +80,14 @@ export function PricingCard({
           <div className="absolute -top-2 -right-2 z-10">
             <Badge variant="destructive" className="bg-red-500 text-white px-3 py-1 shadow-lg animate-pulse">
               50% DESC
+            </Badge>
+          </div>
+        )}
+
+        {isEnterpriseSpecial && (
+          <div className="absolute -top-2 -right-2 z-10">
+            <Badge variant="destructive" className="bg-orange-500 text-white px-3 py-1 shadow-lg animate-pulse">
+              30% DESC
             </Badge>
           </div>
         )}
