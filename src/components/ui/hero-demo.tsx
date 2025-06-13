@@ -59,7 +59,7 @@ export const DemoOne = () => {
               </Button>
               <Button 
                 className="text-sm px-8 py-3 rounded-xl bg-transparent text-white border border-white/20 shadow-none hover:bg-white/10 transition-none"
-                onClick={() => window.open(dianiaUrl, '_blank')}
+                onClick={() => window.open(blogUrl'_blank')}
               >
                 Saber Más
               </Button>
