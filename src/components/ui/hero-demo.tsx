@@ -1,7 +1,7 @@
 import { Scene } from "@/components/ui/hero-section";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { LucideIcon, Cpu, ShieldCheck, Layers, Zap, Eye } from "lucide-react";
+import { DivideIcon as LucideIcon, Cpu, ShieldCheck, Layers, Zap, Eye } from "lucide-react";
 
 const features = [
   {
