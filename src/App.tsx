@@ -1,6 +1,5 @@
 import React from 'react';
 import { Features } from './components/Features';
-import { Benefits } from './components/Benefits';
 import { Services } from './components/Services';
 import { Testimonials } from './components/Testimonials';
 import { Footer } from './components/Footer';
@@ -13,7 +12,6 @@ function App() {
       {/* New 3D Hero Section */}
       <DemoOne />
       <Features />
-      <Benefits />
       <Services />
       <PricingPage />
       <Testimonials />
