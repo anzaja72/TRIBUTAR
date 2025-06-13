@@ -1,9 +1,14 @@
 import { Scene } from "@/components/ui/hero-section";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { DivideIcon as LucideIcon, Cpu, ShieldCheck, Layers, Zap, Eye } from "lucide-react";
+import { DivideIcon as LucideIcon, Cpu, ShieldCheck, Layers, Zap, Eye, BookOpenCheck } from "lucide-react";
 
 const features = [
+  {
+    icon: BookOpenCheck,
+    title: "Tributar-IA",
+    description: "Asistente tributario con IA entrenada para Colombia. Automatiza análisis DIAN, redacción legal y normatividad actualizada.",
+  },
   {
     icon: Cpu,
     title: "Rendimiento",
