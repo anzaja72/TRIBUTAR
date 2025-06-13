@@ -6,23 +6,23 @@ import { Cpu, ShieldCheck, Layers, Zap } from "lucide-react";
 const features = [
   {
     icon: Cpu,
-    title: "Rendimiento",
-    description: "Procesamiento de datos ultra-rápido en cualquier situación.",
+    title: "Contexto",
+    description: "Sistema tributario colombiano preconfigurado.",
   },
   {
     icon: ShieldCheck,
-    title: "Seguridad",
-    description: "Protección avanzada para total tranquilidad.",
+    title: "Precisión",
+    description: "Información tributaria colombiana precisa y actualizada.",
   },
   {
     icon: Layers,
-    title: "Modularidad",
-    description: "Fácil integración con arquitectura existente.",
+    title: "Seguridad",
+    description: "Reduce errores e información inventada en temas fiscales.",
   },
   {
     icon: Zap,
-    title: "Capacidad de respuesta",
-    description: "Respuesta instantánea a cada comando.",
+    title: "Lenguaje",
+    description: "Entiende la jerga tributaria colombiana sin problemas.",
   },
 ];
 
