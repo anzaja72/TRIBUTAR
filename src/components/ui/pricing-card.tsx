@@ -24,6 +24,9 @@ interface PricingCardProps {
   onButtonClick?: () => void;
   className?: string;
   userCount?: number;
+  offer?: string;
+  isCustomPricing?: boolean;
+  customDescription?: string;
 }
 
 export function PricingCard({
@@ -38,12 +41,15 @@ export function PricingCard({
   popular = false,
   onButtonClick,
   className = '',
-  userCount = 0
+  userCount = 0,
+  offer,
+  isCustomPricing = false,
+  customDescription
 }: PricingCardProps) {
-  // Discount logic for first 100 users
-  const displayOriginal = userCount <= 100 ? (originalPrice || basePriceInput * 2) : undefined;
-  const displayPrice = userCount <= 100 ? Math.floor(basePriceInput / 2) : basePriceInput;
-  const isDiscounted = userCount <= 100;
+  // Discount logic for first 100 users (only for Professional plan)
+  const shouldShowDiscount = userCount <= 100 && title === 'Professional';
+  const displayOriginal = shouldShowDiscount ? (originalPrice || basePriceInput * 2) : originalPrice;
+  const displayPrice = shouldShowDiscount ? basePriceInput : basePriceInput;
 
   return (
     <motion.div
@@ -64,7 +70,7 @@ export function PricingCard({
           </div>
         )}
 
-        {isDiscounted && (
+        {shouldShowDiscount && (
           <div className="absolute -top-2 -right-2 z-10">
             <Badge variant="destructive" className="bg-red-500 text-white px-3 py-1 shadow-lg animate-pulse">
               50% OFF
@@ -76,23 +82,40 @@ export function PricingCard({
           <CardTitle className="text-2xl font-bold text-gray-900">{title}</CardTitle>
           <CardDescription className="text-base mt-2 text-gray-600">{description}</CardDescription>
           
-          <div className="mt-6 flex items-center justify-center space-x-2">
-            {displayOriginal && (
-              <span className="text-2xl font-semibold text-gray-400 line-through">
-                ${displayOriginal}
-              </span>
-            )}
-            <span className="text-4xl font-bold text-gray-900">
-              ${displayPrice}
-            </span>
-            {period && (
-              <span className="text-muted-foreground text-lg">{period}</span>
+          {/* Price Display */}
+          <div className="mt-6">
+            {isCustomPricing ? (
+              <div className="text-center">
+                <span className="text-2xl font-bold text-gray-900">Custom pricing</span>
+                <p className="text-sm text-gray-600 mt-2">Contact Sales</p>
+              </div>
+            ) : (
+              <div className="flex items-center justify-center space-x-2">
+                {displayOriginal && (
+                  <span className="text-2xl font-semibold text-gray-400 line-through">
+                    ${displayOriginal}
+                  </span>
+                )}
+                <span className="text-4xl font-bold text-gray-900">
+                  ${displayPrice}
+                </span>
+                {period && displayPrice > 0 && (
+                  <span className="text-muted-foreground text-lg">{period}</span>
+                )}
+              </div>
             )}
           </div>
 
-          {isDiscounted && (
-            <p className="text-sm text-green-600 font-medium mt-2">
-              ¡Oferta especial para los primeros 100 usuarios!
+          {/* Offer/Description */}
+          {offer && (
+            <p className="text-sm text-blue-600 font-medium mt-2">
+              {offer}
+            </p>
+          )}
+
+          {customDescription && (
+            <p className="text-sm text-gray-600 mt-2">
+              {customDescription}
             </p>
           )}
         </CardHeader>
@@ -146,6 +169,11 @@ export function PricingCard({
             {buttonText}
           </Button>
         </CardFooter>
+      </Card>
+    </motion.div>
+  );
+}
+</CardFooter>
       </Card>
     </motion.div>
   );
